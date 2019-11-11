@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Разинкова](https://up.htmlacademy.ru/adaptive/18/user/963347).
-* Наставник: Александр Лямин.
+* Наставник: [Александр Лямин](https://htmlacademy.ru/profile/id1035663).
 
 ---
 
