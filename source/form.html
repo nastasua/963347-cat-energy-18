@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -31,8 +32,10 @@
 
     <main>
       <section class="container-form">
-        <h2 class="container-form__title">Подбор программы</h2>
-        <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="container-form__info-box">
+          <h2 class="container-form__title">Подбор программы</h2>
+          <p class="container-form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
         <form class="container-form__box" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="container-form__groups form-group">
             <legend class="visually-hidden">Личные данные вашего кота</legend>
@@ -50,7 +53,7 @@
             </label>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="container-form__groups form-group">
             <legend class="visually-hidden">Цель</legend>
             <label class="form-group__label">
               <input type="radio" name="slim" checked>
@@ -66,8 +69,8 @@
             </label>
           </fieldset>
 
-          <fieldset>
-            <legend>Контактные данные (владельца кота)</legend>
+          <fieldset class="container-form__groups form-group">
+            <legend class="form-group__title">Контактные данные (владельца кота)</legend>
             <label class="form-group__label">
               E-mail:*
               <input class="form-group__input form-group__text" type="e-mail" name="email" pattern="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" autocomplete="off" required>
@@ -78,13 +81,13 @@
             </label>
           </fieldset>
 
-          <fieldset>
-            <legend>Комментарий</legend>
+          <fieldset class="container-form__groups form-group">
+            <legend class="form-group__title">Комментарий</legend>
             <textarea class="form-group__input form-group__text" name="comment" rows="4" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
           </fieldset>
 
-          <fieldset>
-            <legend>Дополнительно</legend>
+          <fieldset class="container-form__groups form-group">
+            <legend class="form-group__title">Дополнительно</legend>
             <label class="form-group__label">
               <input class="form-group__input" type="checkbox" name="sweetener" checked>
               Сахарозаменитель
@@ -105,12 +108,12 @@
               Витамины
             </label>
           </fieldset>
-          <button class="form-group__btn" type="submit">Отправить заявку</button>
+          <button class="button-link" type="submit">Отправить заявку</button>
         </form>
-        <small>* — Обязательные поля</small>
+        <small class="container-form__small-text">* — Обязательные поля</small>
       </section>
 
-      <section class="address-box">
+      <section class="address-box address-box--grey">
         <h2 class="visually-hidden">Где мы находимся</h2>
         <strong class="address-box__text">Приглашаем к сотрудничеству дилеров!</strong>
         <p class="address-box__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
