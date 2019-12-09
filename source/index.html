@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -86,24 +87,27 @@
           <p class="article__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
             в день.</p>
-          <div class="article__special box-cpecial">
-            <b class="box-cpecial__value">5 кг</b>
-            <span class="box-cpecial__field">снижение веса</span>
-          </div>
-          <div class="article__special box-cpecial">
-            <b class="box-cpecial__value">60 дней</b>
-            <span class="box-cpecial__field">затрачено времени</span>
+          <div class="article__special">
+            <div class="box-cpecial">
+              <b class="box-cpecial__value">5 кг</b>
+              <span class="box-cpecial__field">снижение веса</span>
+            </div>
+            <div class="box-cpecial">
+              <b class="box-cpecial__value">60 дней</b>
+              <span class="box-cpecial__field">затрачено времени</span>
+            </div>
           </div>
           <p class="article__info">Затраты на питание: 15 000 руб.</p>
-          <div class="article__range box-renge">
-            <img class="box-renge__image" src="https://via.placeholder.com/311x232" width="311" height="232" alt="Кот до и после прохождения программы питания">
-            <span class="box-renge__text">Было</span>
-            <div class="box-renge__controls">
-              <input class="box-renge__renge" type="range">
-            </div>
-            <span class="box-renge__text--after">Стало</span>
-          </div>
         </div>
+      </section>
+
+      <section class="box-renge">
+        <img class="box-renge__image" src="https://via.placeholder.com/311x232" width="311" height="232" alt="Кот до и после прохождения программы питания">
+        <span class="box-renge__text">Было</span>
+        <div class="box-renge__controls">
+          <input class="box-renge__renge" type="range">
+        </div>
+        <span class="box-renge__text text-renge--after">Стало</span>
       </section>
 
       <section class="address-box">
