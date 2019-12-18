@@ -6,6 +6,10 @@
 
   background-color: #f2f2f2
 
+.container-footer--flex
+  display: flex
+  flex-direction: column
+
 .social__list
   margin: 0
   padding: 0
@@ -27,6 +31,16 @@
   color: #444444
 
   text-decoration: none
+
+@media (min-width: $tablet-width)
+  .container-footer--flex
+    flex-direction: row
+    justify-content: space-between
+
+@media (min-width: $desktop-width)
+  .container-footer--flex
+    flex-direction: row
+    justify-content: space-between
 
 
 
