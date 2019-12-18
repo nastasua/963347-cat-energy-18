@@ -16,6 +16,8 @@
   color: #111111
 
 .advantages__list
+  display: flex
+  flex-direction: column
   margin: 0
   padding: 0
 
@@ -42,3 +44,11 @@
   line-height: 18px
   font-family: Arial, sans-serif
   color: #444444
+
+@media (min-width: $tablet-width)
+  .advantages__list
+    flex-direction: row
+
+@media (min-width: $desktop-width)
+  .advantages__list
+    flex-direction: row
