@@ -4,6 +4,10 @@
   margin: 0
   padding: 0
 
+.aside-box--flex
+  display: flex
+  flex-direction: column
+
 .aside-box__title
   margin: 0
   padding: 0
@@ -14,13 +18,22 @@
   font-family: Oswald, Arial, sans-serif
   color: #111111
 
-.benefits-box__list
+.benefits-list
   margin: 0
   padding: 0
 
   list-style: none
 
-.benefits-box__title
+.benefits-list__item
+  display: flex
+  flex-direction: column
+
+.box__item--flex
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.benefits-list__title
   margin: 0
   padding: 0
 
@@ -31,8 +44,8 @@
   text-transform: uppercase
   color: #222222
 
-.benefits-box__info,
-.benefits-box__price
+.benefits-list__info,
+.benefits-list__price
   margin: 0
   padding: 0
 
@@ -62,5 +75,27 @@
   line-height: 20px
   font-family: Arial, sans-serif
   color: #ffffff
+
+
+@media (min-width: $tablet-width)
+  .benefits-list__item
+    flex-direction: column
+
+  .tablet-benefits-list-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .box__item--flex
+    flex-direction: row
+
+@media (min-width: $desktop-width)
+  .destop-aside-box-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .benefits-list__item
+    flex-direction: row
 
 
