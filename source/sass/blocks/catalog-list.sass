@@ -1,12 +1,15 @@
+@import variables
+
 .container-box__list
+  display: flex
+  flex-direction: column
   margin: 0
-  padding-top: 0
-  padding-right: 20px
-  padding-bottom: 0
-  padding-left: 20px
+  padding: 0
 
 
 .catalog-list__item
+  display: flex
+  flex-direction: row
   margin: 0
   padding: 0
 
@@ -38,3 +41,28 @@
   line-height: 16px
   font-family: Arial, sans-serif
   color: #444444
+
+.item-list
+  flex-direction: column
+
+@media (min-width: $tablet-width)
+  .container-box__list
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+  .catalog-list__item
+    flex-direction: column
+    padding-top: 70px
+    padding-bottom: 70px
+    min-width: 324px
+
+@media (min-width: $desktop-width)
+  .container-box__list
+    flex-direction: row
+
+  .catalog-list__item
+    flex-direction: column
+    padding-top: 75px
+    padding-bottom: 75px
+    min-width: 245px

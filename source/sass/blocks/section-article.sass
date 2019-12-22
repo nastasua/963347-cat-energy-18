@@ -1,11 +1,14 @@
+@import variables
+
 .article
   margin: 0
-  padding-top: 0
-  padding-right: 20px
-  padding-bottom: 0
-  padding-left: 20px
+  padding: 0
 
   background-color: #f2f2f2
+
+.article--flex
+  display: flex
+  flex-direction: column
 
 .article__title
   margin: 0
@@ -32,6 +35,15 @@
   color: #444444
 
 .article__special
+  display: flex
+  justify-content: space-between
+  margin: 0
+  padding: 0
+
+.box-cpecial
+  display: flex
+  flex-direction: column
+
   margin: 0
   padding: 0
 
@@ -66,3 +78,24 @@
   font-family: Oswald, Arial, sans-serif
   text-transform: uppercase
   color: #111111
+
+@media (min-width: $tablet-width)
+  .article__box--flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .article__special
+    justify-content: space-between
+    min-width: 366px
+
+@media (min-width: $desktop-width)
+  .article--flex
+    min-width: 430px
+
+  .article__box--flex
+    display: flex
+    flex-direction: column
+
+
+

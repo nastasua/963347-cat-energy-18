@@ -1,9 +1,13 @@
+@import variables
+
 .box-programs
   margin: 0
-  padding-top: 0
-  padding-right: 20px
-  padding-bottom: 0
-  padding-left: 20px
+  padding: 0
+
+.box-programs--flex
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 .box-program
   margin: 0
@@ -44,4 +48,12 @@
   color: #111111
 
   text-decoration: none
+
+@media (min-width: $tablet-width)
+  .box-programs--flex
+    flex-direction: column
+
+@media (min-width: $desktop-width)
+  .box-programs--flex
+    flex-direction: row
 
