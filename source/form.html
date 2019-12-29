@@ -4,6 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url("img-pixel/cat-energy-form-mobile.jpg");
+      }
+      /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("img-pixel/cat-energy-form-table.jpg");
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1440px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("img-pixel/cat-energy-form-desctop.jpg");
+        }
+      }
+    </style>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,10 +34,10 @@
     <header class="container-header">
       <div class="wrapper container-header--flex">
         <a class="container-header__logo">
-          <img class="container-header__logo-icon" src="" width="193" height="38" alt="Логотип-иконка «Кэт-енерджи»">
+          <img class="container-header__logo-icon" src="./img/logo-mobile.svg" width="193" height="38" alt="Логотип-иконка «Кэт-енерджи»">
         </a>
-        <nav class="container-header__nav  main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="container-header__nav  main-nav  main-nav--opened">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
