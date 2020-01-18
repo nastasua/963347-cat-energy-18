@@ -7,9 +7,11 @@
   background-color: #ffffff
 
 .container-box__title
+  position: relative
   margin: 0
+  margin-top: 17px
+  margin-bottom: 29px
   padding: 0
-
 
   font-size: 36px
   font-weight: 400
@@ -17,8 +19,33 @@
   font-family: Oswald, Arial, sans-serif
   color: #111111
 
+.container-box__title::after
+  content: " "
+  position: absolute
+  top: 88px
+  left: -7%
+  width: 114%
+  height: 1px
+  background-color: #d9d9d9
+
 .container-box__content
   margin: 0
   padding: 0
+
+@media (min-width: $tablet-width)
+  .container-box__title
+    margin-top: 29px
+    margin-bottom: 89px
+
+    font-size: 60px
+
+  .container-box__title::after
+    display: none
+
+@media (min-width: $desktop-width)
+  .container-box__title
+    margin-top: 19px
+    margin-bottom: 88px
+
 
 
