@@ -5,13 +5,17 @@
   padding: 0
 
 .address-box--grey
-  background-color: #f2f2f2
+  background: #f2f2f2
 
 .address-box--flex
   display: flex
   justify-content: space-between
+  padding: 0
+  padding-top: 28px
+  padding-bottom: 25px
 
 .address-box__text
+  width: 44%
   margin: 0
   padding: 0
 
@@ -23,6 +27,7 @@
   color: #111111
 
 .address-box__address
+  width: 49.9%
   margin: 0
   padding: 0
 
@@ -31,5 +36,60 @@
   line-height: 20px
   font-family: Arial, sans-serif
   color: #444444
+
+@media (min-width: $tablet-width)
+  .address-box--flex
+    padding-top: 65px
+    padding-bottom: 58px
+
+  .address-box__text
+    width: 27.4%
+    padding-left: 5.8%
+
+    font-size: 20px
+    line-height: 25px
+
+  .address-box__address
+    width: 27.4%
+    margin-top: -2px
+    padding-right: 5.9%
+
+    font-size: 16px
+
+    text-align: right
+
+  .address-box__address span
+    display: inline-block
+    margin-top: 21px
+
+    vertical-align: baseline
+
+@media (min-width: $desktop-width)
+  .address-box-map--desktop
+    position: relative
+
+  .address-box
+    position: absolute
+    left: 110px
+    top: 95px
+
+    width: 39.58%
+
+    background: #ffffff
+
+  .address-box__text
+    width: 33%
+    padding-left: 6.8%
+
+  .address-box__address
+    width: 35.4%
+    margin-top: -3px
+
+    text-align: left
+
+  .address-box__address span
+    margin-top: 20px
+
+
 
 
