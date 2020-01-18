@@ -1,0 +1,87 @@
+@import variables
+
+.social__list
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 44.64%
+  margin-top: 19px
+  margin-right: auto
+  margin-bottom: 22px
+  margin-left: auto
+  padding: 0
+  padding-right: 3px
+
+.social__item
+  margin: 0
+  margin-right: 37px
+  padding: 0
+
+  list-style: none
+
+.social__item:last-child
+  margin-right: 0
+
+.social__link--vkontakte
+  margin-left: -5px
+
+.social__link--instagram
+  margin-right: 3px
+
+.social__link-icon path,
+.social__link-icon circle
+  fill: #666666
+
+.social__link--vkontakte:hover .social__link-icon path,
+.social__link--vkontakte:hover .social__link-icon circle,
+.social__link--instagram:hover .social__link-icon path,
+.social__link--instagram:hover .social__link-icon circle,
+.social__link--facebook:hover .social__link-icon path,
+.social__link--facebook:hover .social__link-icon circle
+  fill: $bg-btn-green
+
+.social__link--vkontakte:focus .social__link-icon path,
+.social__link--vkontakte:focus:active .social__link-icon path,
+.social__link--vkontakte:focus .social__link-icon circle,
+.social__link--vkontakte:focus:active .social__link-icon circle,
+.social__link--instagram:focus .social__link-icon path,
+.social__link--instagram:focus:active .social__link-icon path,
+.social__link--instagram:focus .social__link-icon circle,
+.social__link--instagram:focus:active .social__link-icon circle,
+.social__link--facebook:focus .social__link-icon path,
+.social__link--facebook:focus:active .social__link-icon path,
+.social__link--facebook:focus .social__link-icon circle,
+.social__link--facebook:focus:active .social__link-icon circle
+  fill-opacity: 0.3
+
+@media (min-width: $tablet-width)
+  .social__list
+    width: auto
+    margin-top: 22px
+
+  .social__item
+    margin-right: 27px
+
+  .social__link--vkontakte
+    margin-left: 21px
+
+  .social__link--instagram
+    margin-right: 0
+
+  .social__link--vkontakte .social__link-icon
+    width: 31px
+    height: 17px
+
+  .social__link--instagram .social__link-icon
+    width: 24px
+    height: 24px
+
+  .social__link--facebook .social__link-icon
+    width: 15px
+    height: 28px
+
+@media (min-width: $desktop-width)
+  .social__list
+    margin-top: 16px
+
+
