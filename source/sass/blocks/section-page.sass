@@ -1,14 +1,16 @@
 @import variables
 
 .page
-  display: flex
-  flex-direction: column
-  min-height: 480px
+  min-height: 504px
   margin: 0
   padding: 0
 
 .page--backround
-  height: 305px
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  height: 306px
   margin: 0
   padding: 0
 
@@ -19,6 +21,8 @@
 
 .page__title
   margin: 0
+  margin-top: 29px
+  margin-bottom: 25px
   padding: 0
 
   font-size: 36px
@@ -27,8 +31,11 @@
   font-family: Oswald, Arial, sans-serif
   color: #ffffff
 
+  text-align: center
+
 .page__slogan
   margin: 0
+  margin-bottom: 28px
   padding: 0
 
   font-size: 14px
@@ -38,58 +45,104 @@
   text-transform: uppercase
   color: #ffffff
 
+.page__image
+  margin-bottom: 5px
+
 .page__link-select
-  margin: 0
-  padding: 0
+  width: 87.5%
+  padding-top: 10px
+  padding-bottom: 11px
+
+  text-align: center
 
 .page--backround-desktop
   display: none
 
 @media (min-width: $tablet-width)
   .page
-    min-height: auto
+    min-height: 840px
 
   .page--backround
+    align-items: start
     height: auto
-    display: flex
-    flex-direction: column
+    margin-left: 15.2%
 
     background-color: #ffffff
     background-image: none
 
   .page__title
+    width: 53.9%
+    margin-top: 29px
+    margin-bottom: 41px
+
+    font-size: 60px
+    line-height: 60px
+
+    text-align: start
     color: #111111
 
   .page__slogan
+    margin-bottom: 49px
+
+    font-size: 20px
+    line-height: 20px
+
     color: #111111
 
   .page__image
-    order: 1
+    position: absolute
+    top: 342px
+    right: 4%
+
+    width: 83%
+    max-width: 630px
+    height: auto
+
+  .page__link-select
+    width: 31.8%
+    padding-top: 14px
+    padding-bottom: 16px
+
+    z-index: 2
 
 @media (min-width: $desktop-width)
   .page
     flex-direction: row
     justify-content: space-between
+    min-height: 526px
+    margin-bottom: 80px
 
   .page--backround
-    display: flex
-    flex-direction: column
-
-    background-color: #ffffff
-    background-image: none
+    margin-left: 13.2%
 
   .page__title
-    color: #111111
+    width: 29%
+    margin-top: 52px
+    margin-bottom: 41px
 
   .page__slogan
-    color: #111111
+    margin-bottom: 53px
 
   .page__image
-    order: 1
+    top: 144.5px
+    right: 22.5%
+
+    width: 36%
+
+    z-index: 1
+
+  .page__link-select
+    width: 17%
+    padding-top: 15px
+    padding-bottom: 17px
 
   .page--backround-desktop
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 0
     display: block
-    min-width: 720px
+    width: 50%
     min-height: 696px
     margin: 0
     padding: 0
