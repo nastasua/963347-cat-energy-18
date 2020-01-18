@@ -1,0 +1,135 @@
+@import variables
+
+.item-list
+  flex-direction: column
+  align-items: center
+
+.item-list__button
+  position: relative
+  margin: 0
+  margin-top: 79px
+  margin-bottom: 8px
+  padding: 0
+
+  font-size: 16px
+  font-weight: 400
+  line-height: 20px
+  font-family: Oswald, Arial, sans-serif
+  text-transform: uppercase
+  color: #111111
+
+  background: #ffffff
+  border: none
+
+.item-list__button::before
+  content: " "
+  position: absolute
+  top: -39px
+  left: 87px
+  width: 30px
+  height: 2px
+  background-color: #d3d3d3
+
+.item-list__button::after
+  content: " "
+  position: absolute
+  top: -39px
+  left: 87px
+  width: 30px
+  height: 2px
+
+  background-color: #d3d3d3
+
+  transform: rotate(90deg)
+
+.item-list__text
+  margin: 0
+  margin-bottom: 24.5px
+  padding: 0
+
+  font-size: 12px
+  font-weight: 400
+  line-height: 16px
+  font-family: Arial, sans-serif
+  color: #444444
+
+.item-list__btn
+  position: relative
+  width: 91.6%
+  font-size: 16px
+  font-weight: 400
+  line-height: 20px
+  font-family: Oswald, Arial, sans-serif
+  text-transform: uppercase
+  color: #444444
+
+  background-color: #f2f2f2
+
+  text-decoration: none
+
+.item-list__btn:hover
+  background-color: #ebebeb
+
+.item-list__btn:focus,
+.item-list__btn:focus:active
+  color: #b9b9b9
+  background-color: #ebebeb
+
+.item-list__btn::after
+  content: " "
+  position: absolute
+  top: 64px
+  left: -7%
+  width: 114%
+  height: 1px
+  background-color: #d9d9d9
+
+@media (min-width: $tablet-width)
+  .item-list
+    background: #ffffff
+
+    border: 1px solid #e6e6e6
+
+  .item-list__button
+    width: 43.21%
+    margin-top: 0
+    margin-bottom: 24px
+    padding-left: 2px
+
+    font-size: 20px
+
+  .item-list__button::before
+    top: -80px
+    left: 42px
+    width: 60px
+
+  .item-list__button::after
+    top: -80px
+    left: 42px
+    width: 60px
+
+  .item-list__text
+    width: 52.47%
+    margin-bottom: 84px
+
+    font-size: 16px
+    line-height: 20px
+
+    text-align: center
+
+  .item-list__btn
+    width: 69.75%
+
+  .item-list__btn::after
+    display: none
+
+@media (min-width: $desktop-width)
+  .item-list__button
+    width: 56.3%
+
+  .item-list__text
+    width: 72%
+    margin-bottom: 84px
+
+  .item-list__btn
+    width: 59.8%

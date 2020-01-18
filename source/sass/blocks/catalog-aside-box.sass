@@ -9,7 +9,10 @@
   flex-direction: column
 
 .aside-box__title
+  position: relative
   margin: 0
+  margin-top: 28px
+  margin-bottom: 34px
   padding: 0
 
   font-size: 24px
@@ -18,76 +21,40 @@
   font-family: Oswald, Arial, sans-serif
   color: #111111
 
-.benefits-list
-  margin: 0
-  padding: 0
+.aside-box__title::after
+  content: " "
+  position: absolute
+  top: 14px
+  left: 88.2%
+  width: 19%
+  height: 3px
+  background-color: $bg-btn-green
 
-  list-style: none
 
-.benefits-list__item
-  display: flex
-  flex-direction: column
-
-.box__item--flex
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-
-.benefits-list__title
-  margin: 0
-  padding: 0
-
-  font-size: 16px
-  font-weight: 400
-  line-height: 16px
-  font-family: Oswald, Arial, sans-serif
-  text-transform: uppercase
-  color: #222222
-
-.benefits-list__info,
-.benefits-list__price
-  margin: 0
-  padding: 0
-
-  font-size: 14px
-  font-weight: 400
-  line-height: 14px
-  font-family: Arial, sans-serif
-  color: #444444
-
-.special-box
-  height: 289px
-  margin: 0
-  padding: 0
-
-  background-color: #72b649
-  background-image: url("../img/gift-photo-mobile@1x.jpg")
-  background-position: top
-  background-repeat: no-repeat
-  background-size: 280px 289px
-
-.special-box__text
-  margin: 0
-  padding: 0
-
-  font-size: 16px
-  font-weight: 400
-  line-height: 20px
-  font-family: Arial, sans-serif
-  color: #ffffff
 
 
 @media (min-width: $tablet-width)
-  .benefits-list__item
-    flex-direction: column
+  .aside-box__title
+    margin-top: 1px
+    margin-bottom: 79px
+    margin-left: 37px
 
-  .tablet-benefits-list-flex
-    display: flex
-    flex-direction: row
-    justify-content: space-between
+    font-size: 36px
+    line-height: 36px
 
-  .box__item--flex
-    flex-direction: row
+  .aside-box__title::before
+    content: " "
+    position: absolute
+    top: 22px
+    left: -11%
+    width: 5.2%
+    height: 3px
+    background-color: $bg-btn-green
+
+  .aside-box__title::after
+    top: 22px
+    left: 55.7%
+    width: 48.7%
 
 @media (min-width: $desktop-width)
   .destop-aside-box-flex
@@ -95,7 +62,21 @@
     flex-direction: row
     justify-content: space-between
 
-  .benefits-list__item
-    flex-direction: row
+  .aside-box__title
+    margin-top: 6px
+    margin-bottom: 80px
+    margin-left: 0
+
+    font-size: 36px
+    line-height: 36px
+
+  .aside-box__title::before
+    width: 7.7%
+
+  .aside-box__title::after
+    left: 30.6%
+    width: 78.4%
+
+
 
 

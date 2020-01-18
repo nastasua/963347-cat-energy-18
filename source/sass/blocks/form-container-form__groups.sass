@@ -12,6 +12,9 @@
 
   border: none
 
+.form-group--name
+  margin-bottom: 36px
+
 .form-group__title
   margin: 0
   padding: 0
@@ -27,7 +30,13 @@
   flex-direction: column
 
 .form-group__label
+  display: flex
+  justify-content: space-between
+  align-items: center
   margin: 0
+  margin-top: -1px
+  margin-bottom: 14px
+  margin-left: -1px
   padding: 0
 
   font-size: 16px
@@ -38,10 +47,13 @@
   color: #222222
 
 .form-group__input
-  padding-top: 15px
+  flex-grow: 1
+  padding-top: 12px
   padding-right: 16px
-  padding-bottom: 15px
-  padding-left: 16px
+  padding-bottom: 13px
+  padding-left: 15px
+  margin-top: 1px
+  margin-left: 15px
 
   font-size: 16px
   font-weight: 400

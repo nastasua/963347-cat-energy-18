@@ -2,17 +2,19 @@
 
 .advantages
   margin: 0
+  margin-bottom: 20px
   padding: 0
 
 .advantages__title
   margin: 0
+  margin-top: -3px
+  margin-bottom: 28px
   padding: 0
 
-  font-size: 24px
+  font-size: 36px
   font-weight: 400
-  line-height: 37px
+  line-height: 60px
   font-family: Oswald, Arial, sans-serif
-  text-transform: uppercase
   color: #111111
 
 .advantages__list
@@ -22,21 +24,33 @@
   padding: 0
 
 .advantages__item
+  display: flex
   margin: 0
+  margin-bottom: 20px
   padding: 0
 
   list-style: none
+
+.advantages__number
+  display: none
 
 .advantages__image
   width: 60px
   height: 60px
   margin: 0
+  margin-right: 7.2%
   padding: 0
 
   background-color: $bg-btn-green
+  text-align: center
+
+.advantages__image img
+  transform: translate(0, 6px)
 
 .advantages__text
+  width: 69.3%
   margin: 0
+  margin-top: 1.5px
   padding: 0
 
   font-size: 14px
@@ -45,10 +59,79 @@
   font-family: Arial, sans-serif
   color: #444444
 
+.advantages__text br
+  display: none
+
 @media (min-width: $tablet-width)
+  .advantages__title
+    margin-top: 45px
+    margin-bottom: 73px
+
+    font-size: 60px
+    line-height: 60px
+
   .advantages__list
     flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+
+  .advantages__item
+    position: relative
+    flex-direction: column
+    width: 45.8%
+    min-height: 230px
+    margin-bottom: 87px
+
+  .advantages__number
+    position: absolute
+    top: -39px
+    right: 85px
+
+    display: block
+
+    font-size: 281px
+    font-weight: 400
+    line-height: 281px
+    font-family: Oswald, Arial, sans-serif
+    color: #f2f2f2
+
+  .advantages__image
+    width: 80px
+    height: 80px
+    margin-bottom: 32px
+
+  .advantages__image img
+    transform: translate(0, 15px)
+
+  .advantages__text
+    width: 76.3%
+    margin-top: 0
+
+    font-size: 16px
+    line-height: 24px
+
+    z-index: 2
+
+  .advantages__text br
+    display: inline
 
 @media (min-width: $desktop-width)
-  .advantages__list
-    flex-direction: row
+  .advantages
+    margin-bottom: 128px
+
+  .advantages__title
+    margin-top: 43px
+    margin-bottom: 73px
+
+  .advantages__item
+    width: 20.1%
+    min-height: 230px
+    margin-bottom: 87px
+
+  .advantages__number
+    top: -39px
+    right: 3px
+
+  .advantages__text
+    width: 100%
+

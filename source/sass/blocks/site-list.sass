@@ -1,0 +1,146 @@
+@import variables
+
+.site-list
+  display: flex
+  flex-direction: column
+  margin: 0
+  padding: 0
+
+  list-style: none
+
+.site-list__item
+  text-align: center
+
+.site-list__link
+  display: block
+  margin: 0 auto
+  padding: 21px 0
+  padding-bottom: 23px
+
+  font-size: 20px
+  font-weight: 500
+  line-height: 20px
+  font-family: Oswald, Arial, sans-serif
+  text-transform: uppercase
+  color: #111111
+
+  text-decoration: none
+  border-top: 1px solid #e6e6e6
+
+.site-list__link[href]:hover
+  color: #707070
+
+.site-list__link[href]:focus:active
+  color: #b7b7b7
+
+@media (min-width: $tablet-width)
+  .site-list
+    display: flex
+    margin-right: 6.4%
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: center
+    min-height: 106px
+
+  .site-list__item
+    margin-right: 8%
+
+    &:last-child
+      margin-right: 0
+
+    &--active
+      position: relative
+
+      &::after
+        content: ""
+
+        position: absolute
+        right: 0
+        bottom: 4px
+        left: 0
+
+        height: 2px
+
+        background: $bg-btn-green
+
+  .site-list__link
+    padding: 15px 0
+
+    font-size: 18px
+    line-height: 24px
+
+    border-top: none
+
+@media (min-width: $desktop-width)
+  .site-list
+    display: flex
+    margin-right: 15.8%
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-end
+    align-items: center
+    min-height: 170px
+
+  .site-list__item
+    margin-right: 5.6%
+
+    &::after
+      bottom: 19px
+
+  .site-list__link
+    padding: 30px 0
+
+    font-size: 20px
+    line-height: 24px
+
+    border-top: none
+
+  .item-index-desktop
+    margin-right: 5.6%
+
+    &:last-child
+      margin-right: 0
+
+    &--active
+      position: relative
+
+      &::after
+        content: ""
+
+        position: absolute
+        right: 0
+        bottom: 19px
+        left: 0
+
+        height: 2px
+
+        background: #ffffff
+
+  .item-index-desktop .site-list__link
+    padding: 30px 0
+
+    font-size: 20px
+    line-height: 24px
+    color: #ffffff
+
+    border-top: none
+
+  .item-index-desktop .site-list__link[href]:hover
+    color: #c1ddb1
+
+  .item-index-desktop .site-list__link[href]:focus:active
+    color: #94c377
+
+
+
+
+
+
+
+
+
+
+
+
+

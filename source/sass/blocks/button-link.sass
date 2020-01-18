@@ -1,8 +1,7 @@
 @import variables
 
 .button-link
-  margin: 0
-  padding: 0
+  max-height: 42px
 
   font-size: 14px
   font-weight: 400
@@ -14,3 +13,16 @@
   background-color: $bg-btn-green
 
   text-decoration: none
+
+.button-link:hover
+  background-color: #5eaa2f
+
+.button-link:focus,
+.button-link:focus:active
+  color: #8fc46e
+  background-color: #5eaa2f
+
+@media (min-width: $tablet-width)
+  .button-link
+    font-size: 20px
+    line-height: 20px

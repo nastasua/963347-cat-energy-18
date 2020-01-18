@@ -12,22 +12,32 @@
 @import "blocks/main-index.sass"
 @import "blocks/section-page.sass"
 @import "blocks/button-link.sass"
-@import "blocks/section-box-program.sass"
+@import "blocks/section-box-programs.sass"
 @import "blocks/section-advantages.sass"
 @import "blocks/footer.sass"
 @import "blocks/catalog-main.sass"
 @import "blocks/catalog-list.sass"
-@import "blocks/item-more.sass"
+@import "blocks/item-list.sass"
 @import "blocks/section-article.sass"
-@import "blocks/section-box-renge.sass"
+@import "blocks/section-box-range.sass"
 @import "blocks/section-address-box.sass"
 @import "blocks/catalog-aside-box.sass"
 @import "blocks/section-container-form.sass"
 @import "blocks/form-container-form__groups.sass"
+@import "blocks/site-list.sass"
+@import "blocks/section-map-box.sass"
+@import "blocks/social.sass"
+@import "blocks/catalog-benefits-list.sass"
+@import "blocks/catalog-special-box.sass"
+@import "blocks/form-group--radio.sass"
+@import "blocks/form-group--email.sass"
+@import "blocks/form-group--comment.sass"
+
 
 body
   margin: 0
   padding: 0
+  opacity: 0.8
 
 .visually-hidden
   position: absolute
@@ -42,4 +52,20 @@ body
   clip-path: inset(100%)
   clip: rect(0 0 0 0)
   overflow: hidden
+
+.visually-hidden:not(:focus):not(:active)
+  position: absolute
+
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+
+  white-space: nowrap
+
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
 

@@ -1,0 +1,152 @@
+@import variables
+
+.benefits-list
+  margin: 0
+  margin-bottom: 40px
+  padding: 0
+
+  list-style: none
+
+.benefits-list__item
+  display: flex
+  flex-direction: column
+
+  padding-top: 13px
+  padding-bottom: 18px
+
+  border-bottom: 1px solid #cdcdcd
+
+  &:first-child
+    border-top: 1px solid #cdcdcd
+
+.box__item--flex
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.benefits-list__title
+  margin: 0
+  margin-bottom: 13px
+  padding: 0
+
+  font-size: 16px
+  font-weight: 400
+  line-height: 16px
+  font-family: Oswald, Arial, sans-serif
+  text-transform: uppercase
+  color: #222222
+
+.benefits-list__info,
+.benefits-list__price
+  margin: 0
+  margin-bottom: 14px
+  padding: 0
+
+  font-size: 14px
+  font-weight: 400
+  line-height: 14px
+  font-family: Arial, sans-serif
+  color: #444444
+
+.benefits-list__btn
+  width: 100%
+  padding: 10px
+  padding-left: 13px
+  margin: 0 auto
+
+  font-size: 16px
+  line-height: 20px
+
+  border: none
+
+@media (min-width: $tablet-width)
+  .benefits-list
+    margin-bottom: 70px
+
+  .benefits-list__item
+    flex-direction: column
+
+    padding-top: 26px
+    padding-right: 5.1%
+    padding-bottom: 26px
+    padding-left: 5.4%
+
+    border: 1px solid #cdcdcd
+
+    &:not(:last-child)
+      border-bottom: none
+
+  .tablet-benefits-list-flex
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .benefits-list__title
+    margin: 0
+    margin-bottom: 26px
+    padding: 0
+
+    font-size: 20px
+    line-height: 20px
+
+  .box__item--flex
+    flex-direction: row
+    max-width: 37%
+
+  .benefits-list__info,
+  .benefits-list__price
+    margin-top: 4px
+
+    font-size: 16px
+    line-height: 20px
+
+  .benefits-list__info
+    margin-right: 52px
+
+  .benefits-list__info--right
+    margin-right: 62px
+
+  .benefits-list__btn
+    padding-left: 5px
+
+@media (min-width: $desktop-width)
+  .benefits-list
+    width: 73.38%
+    margin-bottom: 87px
+
+  .tablet-benefits-list-flex
+    flex-grow: 1
+
+  .benefits-list__item
+    flex-direction: row
+    justify-content: space-between
+
+    padding-top: 14px
+    padding-right: 0
+    padding-bottom: 0
+    padding-left: 0
+
+    border-right: none
+    border-left: none
+
+  .box__item--flex
+    width: 46.8%
+    max-width: none
+
+    margin-top: 11px
+
+  .benefits-list__title
+    margin-top: 11px
+
+  .benefits-list__price--left
+    margin-right: 10px
+
+  .benefits-list__btn
+    width: 27.37%
+    max-height: 41px
+    margin: 0
+    margin-left: 4.2%
+    padding-left: 13px
+
+
+

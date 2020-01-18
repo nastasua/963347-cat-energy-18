@@ -1,0 +1,39 @@
+@import variables
+
+.map-box
+  margin: 0
+  margin-top: -1px
+  margin-bottom: -4px
+  padding: 0
+
+  background-image: url("../img/bg-map-mobile@1x.png")
+
+.map-box__map
+  width: 100%
+  margin: 0
+  padding: 0
+
+  border-width: 0
+
+@media (min-width: $tablet-width)
+  .map-box
+    background-image: url("../img/bg-map-tablet@1x.png")
+
+  .map-box__map
+    width: 100%
+    height: 397px
+
+  .map-box__map--top
+    margin-top: 0
+
+@media (min-width: $desktop-width)
+  .map-box
+    height: 405px
+    margin-bottom: 0
+    background-image: url("../img/bg-map-desktop@1x.png")
+
+  .map-box__map
+    height: 405px
+
+ 
+
