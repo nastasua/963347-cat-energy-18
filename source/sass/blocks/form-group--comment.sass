@@ -1,3 +1,76 @@
 @import variables
 
+.form-group--comment
+  margin-bottom: 28px
 
+.form-group__title--comment
+  position: relative
+  margin-bottom: 35px
+
+.form-group__title--comment:after
+  content: " "
+  position: absolute
+  top: 14px
+  right: -7.5%
+  width: 56.3%
+  height: 3px
+  background-color: $bg-btn-green
+
+.form-group__input--comment
+  width: 89.4%
+  margin: 0
+  padding-top: 12px
+  padding-right: 14px
+  padding-bottom: 10px
+  padding-left: 14px
+
+  resize: none
+
+@media (min-width: $tablet-width)
+  .form-group--comment
+    margin-bottom: 65px
+
+  .form-group__title--comment
+    margin-bottom: 76px
+    margin-left: 39px
+
+  .form-group__title--comment:after
+    top: 22px
+    right: 1.2%
+    width: 67.7%
+
+  .form-group__title--comment:before
+    content: " "
+    position: absolute
+    top: 22px
+    right: 105.5%
+    width: 4.3%
+    height: 3px
+    background-color: $bg-btn-green
+
+  .form-group__input--comment
+    width: 83.8%
+    margin-left: 5.6%
+    padding-top: 14px
+    padding-right: 18px
+    padding-bottom: 32px
+    padding-left: 18px
+
+  @media (min-width: $desktop-width)
+    .form-group--comment
+      margin-bottom: 67px
+
+    .form-group__title--comment
+      margin-left: -1px
+
+    .form-group__title--comment:after
+      right: -9.1%
+      width: 91.1%
+
+    .form-group__title--comment:before
+      right: 103.2%
+      width: 5.7%
+
+    .form-group__input--comment
+      width: 97%
+      margin-left: 0
