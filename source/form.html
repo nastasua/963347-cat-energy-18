@@ -63,81 +63,85 @@
                 <legend class="visually-hidden">Личные данные вашего кота</legend>
                 <label class="form-group__label">
                   Имя:*
-                  <input class="form-group__input form-group__text" type="text" name="name" placeholder="Барсик" autocomplete="off" required>
+                  <input class="form-group__input" type="text" name="name" placeholder="Барсик" autocomplete="off" required>
                 </label>
                 <label class="form-group__label">
                   Вес (кг):*
-                  <input class="form-group__input form-group__text" type="text" name="weight" placeholder="7" autocomplete="off" required>
+                  <input class="form-group__input" type="text" name="weight" placeholder="7" autocomplete="off" required>
                 </label>
                 <label class="form-group__label">
                   Возраст (лет):
-                  <input class="form-group__input form-group__text" type="text" name="age" placeholder="7" autocomplete="off">
+                  <input class="form-group__input" type="text" name="age" placeholder="7" autocomplete="off" required>
                 </label>
               </fieldset>
 
               <fieldset class="container-form__groups form-group form-group--radio">
                 <legend class="visually-hidden">Цель</legend>
-                <label class="form-group__label form-group__label--radio">
-                  <input type="radio" name="slim" checked>
+                <input class="visually-hidden form-group__radio" type="radio" name="radio" id="slim" checked>
+                <label class="form-group__label form-group__label--radio" for="slim">
                   Похудение
                 </label>
-                <label class="form-group__label form-group__label--radio">
-                  <input type="radio" name="pro">
+
+                <input class="visually-hidden form-group__radio" type="radio" name="radio" id="pro">
+                <label class="form-group__label form-group__label--radio" for="pro">
                   Набор массы
                 </label>
-                <label class="form-group__label form-group__label--radio">
-                  <input type="radio" name="council">
+
+                <input class="visually-hidden form-group__radio" type="radio" name="radio" id="council">
+                <label class="form-group__label form-group__label--radio" for="council">
                   Не знаю (Нужен ваш совет)
                 </label>
               </fieldset>
             </div>
 
             <fieldset class="container-form__groups form-group form-group--email">
-              <legend class="form-group__title form-group__title--email">Контактные данные (владельца кота)</legend>
+              <legend class="form-group__title form-group__title--email">Контактные данные<br> (владельца кота)</legend>
               <div class="form-group--desktop">
-                <label class="form-group__label">
+                <label class="form-group__label form-group__label--email">
                   E-mail:*
-                  <input class="form-group__input  form-group__input--email  form-group__text" type="text" name="email" pattern="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" autocomplete="off" required>
+                  <input class="form-group__input  form-group__input--email" type="text" name="email" pattern="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" autocomplete="off" required>
                 </label>
-                <label class="form-group__label">
+                <label class="form-group__label form-group__label--tel">
                   Телефон:*
-                  <input class="form-group__input  form-group__input--email  form-group__text" type="tel" name="phone" pattern="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" autocomplete="off" required>
+                  <input class="form-group__input  form-group__input--tel" type="tel" name="phone" pattern="8 (960) 900-60-90" placeholder="8 (960) 900-60-90" autocomplete="off" required>
                 </label>
               </div>
             </fieldset>
 
             <fieldset class="container-form__groups form-group form-group--comment">
-              <legend class="form-group__title">Комментарий</legend>
-              <textarea class="form-group__input form-group__text" name="comment" rows="4" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
+              <legend class="form-group__title form-group__title--comment">Комментарий</legend>
+              <textarea class="form-group__input  form-group__input--comment  form-group__text" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота" autocomplete="off"></textarea>
             </fieldset>
 
-            <fieldset class="container-form__groups form-group">
-              <legend class="form-group__title">Дополнительно</legend>
-              <div class="form-group--desktop">
-                <label class="form-group__label">
-                  <input class="form-group__input" type="checkbox" name="sweetener" checked>
+            <fieldset class="container-form__groups form-group form-group--checkbox">
+              <legend class="form-group__title form-group__title--checkbox">Дополнительно</legend>
+              <div class="form-group--tablet">
+                <input class="visually-hidden form-group__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                <label class="form-group__label form-group__label--checkbox" for="sweetener">
                   Сахарозаменитель
                 </label>
 
-                <label class="form-group__label">
-                  <input class="form-group__input" type="checkbox" name="water">
+                <input class="visually-hidden form-group__checkbox" type="checkbox" name="water" id="water">
+                <label class="form-group__label form-group__label--checkbox" for="water">
                   Питьевая вода
                 </label>
 
-                <label class="form-group__label">
-                  <input class="form-group__input" type="checkbox" name="milk">
+                <input class="visually-hidden form-group__checkbox" type="checkbox" name="milk" id="milk">
+                <label class="form-group__label form-group__label--checkbox" for="milk">
                   Молоко
                 </label>
 
-                <label class="form-group__label">
-                  <input class="form-group__input" type="checkbox" name="vitamin">
+                <input class="visually-hidden form-group__checkbox" type="checkbox" name="vitamin" id="vitamin">
+                <label class="form-group__label form-group__label--checkbox" for="vitamin">
                   Витамины
                 </label>
               </div>
             </fieldset>
-            <button class="button-link" type="submit">Отправить заявку</button>
+            <div class="container-form__box-btn">
+              <button class="button-link container-form--btn" type="submit">Отправить заявку</button>
+              <small class="container-form__small-text">* — Обязательные поля</small>
+            </div>
           </form>
-          <small class="container-form__small-text">* — Обязательные поля</small>
         </div>
       </section>
 
