@@ -8,9 +8,11 @@
 
   text-align: center
 
-.box-range__image
-  height: 236px
-  margin-bottom: 23px
+.box-range__image-before
+  margin-bottom: 27px
+
+.box-range--after
+  display: none
 
 .box-range__controls
   display: flex
@@ -31,19 +33,75 @@
   color: #111111
 
 .box-range__range
-  width: 42.3%
+  -webkit-appearance: none
+
+  width: 38.5%
+  height: 6px
+  margin-top: 3px
+
+  background: #ffffff
+  border: 3px solid #ffffff
+  border-radius: 16px
+  box-shadow: 0 0 0 1px #cdcdcd
+  overflow: hidden
+
+.box-range__range::-webkit-slider-thumb
+  -webkit-appearance: none
+  appearance: none
+
+  width: 6px
+  height: 6px
+
+  background: $bg-btn-green
+  border-radius: 50%
+  box-shadow: -203px 0 0 200px $bg-btn-green
+  cursor: pointer
+
+.box-range__range::-moz-range-thumb
+  width: 6px
+  height: 6px
+
+  background: $bg-btn-green
+  border-radius: 50%
+  cursor: pointer
 
 @media (min-width: $tablet-width)
   .box-range
+    position: relative
     height: 462px
 
-  .box-range__image
+  .box-range__image-before
     position: absolute
+    top: -168px
+    left: 48px
+
+    width: 680px
+    height: 516px
+
+  .box-range--after
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+
+    width: 100%
+    height: 462px
+
+    background-color: #eaeaea
+
+  .box-range__image-after
+    position: absolute
+    top: -168px
+    left: 21px
 
   .box-range__controls
+    position: relative
+
     padding-top: 367px
     padding-right: 13.02%
     padding-left: 12.8%
+
+    z-index: 999
 
   .box-range__text
     font-size: 20px
@@ -52,15 +110,69 @@
     border-bottom: 1px dotted #b8b8b8
 
   .box-range__range
-    width: 75.44%
+    width: 75.2%
+    margin-left: 4px
+    margin-top: 7px
+
+    background: #dcdcdc
+    border: none
+    box-shadow: none
+    outline: none
+    overflow: visible
+
+  .box-range__range::-webkit-slider-thumb
+    width: 32px
+    height: 32px
+    margin-top: 1px
+
+    border: 12px solid #ffffff
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 4px 1px #cdcdcd
+
+  .box-range__range:hover::-webkit-slider-thumb
+    box-shadow: 0 0 0 1px #cdcdcd, 0 3px 4px 1px #bebebe
+
+  .box-range__range:active::-webkit-slider-thumb
+    width: 30px
+    height: 30px
+
+    border: 11px solid #ffffff
+    box-shadow: 0 0 0 2px $bg-btn-green, 0 4px 4px 1px #adadad
+
+  .box-range__range::-moz-range-thumb
+    width: 8px
+    height: 8px
+    margin-top: 7px
+
+    border: 12px solid #ffffff
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 4px 1px #cdcdcd
+
+  .box-range__range:hover::-moz-range-thumb
+    box-shadow: 0 0 0 1px #cdcdcd, 0 3px 4px 1px #bebebe
+
+  .box-range__range:active::-moz-range-thumb
+    width: 7x
+    height: 7px
+
+    border: 11px solid #ffffff
+    box-shadow: 0 0 0 2px $bg-btn-green, 0 4px 4px 1px #adadad
 
 @media (min-width: $desktop-width)
   .box-range
     width: auto
     flex-grow: 1
 
-  .box-range__image
-    position: absolute
+  .box-range__image-before
+    top: -190px
+    left: 135px
+
+  .box-range--after
+    left: 10%
+
+    width: 90%
+
+  .box-range__image-after
+    top: -190px
+    left: 17px
 
   .box-range__controls
     padding-right: 12.25%
