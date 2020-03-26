@@ -19,7 +19,7 @@
   width: 50px
   height: 50px
   border-radius: 50%
-  margin-top: 25px
+  margin-top: 24px
   margin-right: 5.3%
   margin-bottom: 21px
   margin-left: 7.8%
@@ -31,15 +31,15 @@
 
 .box-program__icon-slim
   position: absolute
-  bottom: 3px
-  left: 7px
+  bottom: 4px
+  left: 8px
 
   width: 38px
   height: 50px
 
 .box-program__icon-pro
   position: absolute
-  bottom: 11px
+  bottom: 9px
   left: -10px
 
   width: 68px
@@ -75,7 +75,7 @@
   color: #444444
 
   &::after
-    content: ""
+    content: " "
 
     position: absolute
     bottom: -23px
@@ -116,15 +116,16 @@
 
     background: url("../img/icon-right-arrow-long.svg")
 
-.box-program__link:hover .box-program__link::after
-  content: " "
-  position: absolute
-  top: 3px
-  right: -36px
-  width: 32px
-  height: 11px
+.box-program__link:hover
+  &::after
+    content: " "
+    position: absolute
+    top: 4px
+    right: -56px
+    width: 32px
+    height: 11px
 
-  background: url("../img/icon-right-arrow-verylong.svg")
+    background: url("../img/icon-right-arrow-verylong.svg")
 
 .box-program__link:focus,
 .box-program__link:focus .box-program__link::after,
@@ -147,16 +148,16 @@
 
   .box-program__icon-slim
     bottom: 17px
-    left: 27px
+    left: 30px
 
     width: auto
-    height: 194px
+    height: 198px
 
   .box-program__icon-pro
-    bottom: 39px
-    left: -33px
+    bottom: 36px
+    left: -35px
 
-    width: 268px
+    width: 270px
     height: auto
 
   .box-program__title
@@ -222,17 +223,17 @@
     margin-left: 9.1%
 
   .box-program__icon-slim
-    bottom: 8px
-    left: 12px
+    bottom: 9px
+    left: 14px
 
     width: auto
-    height: 98px
+    height: 99px
 
   .box-program__icon-pro
-    bottom: 19px
-    left: -19px
+    bottom: 18px
+    left: -21px
 
-    width: 134px
+    width: 137px
     height: auto
 
   .box-program__text
@@ -242,7 +243,3 @@
 
   .box-program__link
     margin-left: 9.2%
-
-
-
-
