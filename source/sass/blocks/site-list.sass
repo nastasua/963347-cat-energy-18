@@ -44,13 +44,13 @@
     flex-wrap: wrap
     justify-content: flex-end
     align-items: center
-    min-height: 106px
 
   .site-list__item
-    margin-right: 8%
+    margin-left: 8%
 
-    &:last-child
-      margin-right: 0
+    &:first-child,
+    &:nth-child(4n)
+      margin-left: 0
 
     &--active
       position: relative
@@ -71,7 +71,7 @@
     border-bottom: none
 
   .site-list__link
-    padding: 15px 0
+    padding: 17px 0 15px 0
 
     font-size: 18px
     line-height: 24px
@@ -86,42 +86,35 @@
     flex-wrap: wrap
     justify-content: flex-end
     align-items: center
-    min-height: 170px
 
   .site-list__item
-    margin-right: 5.6%
+    margin-left: 5.8%
 
-    &::after
-      bottom: 19px
+  .site-list__item::after
+    bottom: 19px
 
   .site-list__link
-    padding: 30px 0
+    padding: 29px 0
 
     font-size: 20px
     line-height: 24px
 
     border-top: none
 
-  .item-index-desktop
-    margin-right: 5.6%
+  .item-index-desktop--active
+    position: relative
 
-    &:last-child
-      margin-right: 0
+    &::after
+      content: " "
 
-    &--active
-      position: relative
+      position: absolute
+      right: 0
+      bottom: 19px
+      left: 0
 
-      &::after
-        content: " "
+      height: 2px
 
-        position: absolute
-        right: 0
-        bottom: 19px
-        left: 0
-
-        height: 2px
-
-        background: #ffffff
+      background: #ffffff
 
   .item-index-desktop .site-list__link
     padding: 30px 0

@@ -53,6 +53,8 @@
   padding-left: 15px
   margin-top: 1px
   margin-left: 15px
+  width: 48%
+  height: 45px
 
   font-size: 16px
   font-weight: 400
@@ -62,6 +64,7 @@
   color: #444444
 
   border: 1px solid #e7e7e7
+  box-sizing: border-box
 
 .form-group__input:hover
   border: 1px solid #bababa
@@ -101,6 +104,7 @@
     line-height: 20px
 
   .form-group__input
+    height: 53px
     padding-top: 10px
     padding-right: 19px
     padding-bottom: 11px
@@ -110,6 +114,19 @@
 
     font-size: 20px
     line-height: 20px
+
+    box-sizing: border-box
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    .form-group__input::placeholder
+      padding: 0 17px
+      margin-top: 2px
+      margin-left: 17px
+
+  @-moz-document url-prefix()
+    .form-group__input
+      padding-top: 13px
+      padding-bottom: 17px
 
   .form-group__input::placeholder
     font-size: 20px

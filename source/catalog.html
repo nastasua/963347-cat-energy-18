@@ -4,28 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* По умолчанию показывается мобильный макет */
-        /* background-image: url("img-pixel/cat-energy-catalog-mobile-menu.jpg"); */
-      }
-      /* Планшет */
-      @media ( min-width: 768px ) {
-        HTML {
-          /* Планшетный макет */
-          /* background-image: url("img-pixel/cat-energy-catalog-tablet.jpg"); */
-        }
-      }
-      /* Десктоп */
-      @media ( min-width: 1440px ) {
-        HTML {
-          /* Десктопный макет */
-          /* background-image: url("img-pixel/cat-energy-catalog-desktop.jpg"); */
-        }
-      }
-    </style>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -69,14 +47,14 @@
     </symbol>
   </svg>
 
-  <body onload="loadPage()">
+  <body>
 
     <header class="container-header container-header--flex">
       <a class="wrapper container-header__logo" href="index.html">
-        <picture>
+        <picture class="container-header__box">
           <source media="(min-width: 1200px)" srcset="./img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
-          <img class="container-header__logo-icon" src="./img/logo-mobile.svg" width="193" height="38" alt="Логотип-иконка «Кэт-енерджи»">
+          <img class="container-header__logo-icon" src="./img/logo-mobile.svg" width="38" height="38" alt="Логотип-иконка «Кэт-енерджи»">
         </picture>
       </a>
       <nav class="container-header__nav  main-nav  main-nav--opened  main-nav--nojs">
@@ -502,16 +480,7 @@
 
         <section class="map-box">
           <h2 class="visually-hidden">Карта месторасположения нашего магазина</h2>
-          <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp">
-            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp">
-
-            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-            <img class="map-box__map-img" src="img/bg-map-mobile@1x.png" width="320" height="364">
-          </picture>
-          <iframe class="map-box__map" src="https://yandex.ru/map-widget/v1/-/CGeoJF2t" width="320" height="364" frameborder="1" allowfullscreen="true"></iframe>
+          <div class="map-box__map" id="map"></div>
         </section>
       </div>
     </main>
@@ -519,7 +488,7 @@
     <footer class="container-footer">
       <div class="wrapper container-footer--flex">
         <a class="container-footer__logo" href="index.html">
-          <img class="container-footer__logo-icon" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-енерджи»">
+          <img class="container-footer__logo-icon" src="img/logo-text.svg" width="128" height="24" alt="Логотип «Кэт-енерджи»">
         </a>
 
         <ul class="container-footer__social social__list">
@@ -546,7 +515,7 @@
           </li>
         </ul>
 
-        <a class="container-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="container-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
           HTML Academy
           <svg class="container-footer__link-icon" width="41" height="48">
             <use xlink:href="#icon-html-academy"></use>
@@ -555,34 +524,8 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-
-      var map = document.querySelector('.map-box__map');
-      var mapImg = document.querySelector('.map-box__map-img');
-
-      function loadPage() {
-        if (mapImg.style.display = 'block') {
-          map.style.display = 'none';
-        }
-        // в мобильной и планшетной версии появляются оба варианта, и картинка пропадает только когда карта полностью загружена
-        mapImg.style.display = 'none';
-        map.style.display = 'block';
-      }
-    </script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

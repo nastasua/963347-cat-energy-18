@@ -1,6 +1,7 @@
 @import variables
 
 .box-range
+  position: relative
   margin: 0
   padding: 0
 
@@ -8,21 +9,57 @@
 
   text-align: center
 
-.box-range__image-before
-  margin-bottom: 27px
+.box-range__wrapper
+  position: relative
 
-.box-range--after
-  display: none
+  margin: 0 auto
+  margin-bottom: 33px
+  width: 320px
+  height: 240px
+
+.box-range__box-before
+  width: 50%
+
+  overflow: hidden
+
+.box-range__after
+  position: absolute
+  bottom: 70px
+  right: 0
+
+  height: 260px
+
+  background-color: #f2f2f2
+
+.box-range__box-after
+  position: absolute
+  right: 0
+  top: 0
+
+  width: 50%
+  height: 240px
+
+  overflow: hidden
+  direction: rtl
+
+  transform: scaleX(-1)
+
+.box-range__image-after
+  position: absolute
+  top: -2px
+  left: -1px
+
+  transform: scaleX(-1)
 
 .box-range__controls
   display: flex
   justify-content: space-between
   padding-right: 18.44%
   padding-left: 20%
+  padding-bottom: 33px
 
-.box-range__text
+.box-range__btn
   margin: 0
-  margin-bottom: 35px
   padding: 0
 
   font-size: 16px
@@ -32,12 +69,20 @@
   text-transform: uppercase
   color: #111111
 
+  border: none
+  background: transparent
+
+.box-range__btn:focus,
+.box-range__btn:focus:active
+  opacity: 0.5
+
 .box-range__range
   -webkit-appearance: none
 
   width: 38.5%
   height: 6px
   margin-top: 3px
+  padding: 0
 
   background: #ffffff
   border: 3px solid #ffffff
@@ -49,65 +94,138 @@
   -webkit-appearance: none
   appearance: none
 
-  width: 6px
+  width: 50%
   height: 6px
 
   background: $bg-btn-green
-  border-radius: 50%
-  box-shadow: -203px 0 0 200px $bg-btn-green
+  border-radius: 10px
   cursor: pointer
 
 .box-range__range::-moz-range-thumb
-  width: 6px
+  width: 50%
   height: 6px
 
   background: $bg-btn-green
-  border-radius: 50%
+  border-radius: 10px
   cursor: pointer
+
+.box-range__range::-ms-thumb
+  width: 35px
+  height: 6px
+  padding: 0
+
+  background: $bg-btn-green
+  border-radius: 10px
+  cursor: pointer
+
+.box-range__range:focus::-ms-thumb,
+.box-range__range:active::-ms-thumb
+  outline: none
+  border: none
+
+.box-range__range::-ms-track
+  width: 38.5%
+  height: 6px
+  padding: 0
+
+  background: transparent
+  border-color: transparent
+  color: transparent
+  border-width: 3px
+
+.box-range__range::-ms-fill-lower
+  height: 6px
+  padding: 0
+  background: #ffffff
+  border: 3px solid #ffffff
+  border-radius: 16px
+  box-shadow: 0 0 0 1px #cdcdcd
+
+.box-range__range::-ms-fill-upper
+  height: 6px
+  padding: 0
+  background: #ffffff
+  border: 3px solid #ffffff
+  border-radius: 16px
+  box-shadow: 0 0 0 1px #cdcdcd
+
+.box-range__range::-ms-tooltip,
+.box-range__range::-ms-ticks-after,
+.box-range__range::-ms-ticks-before
+	display: none
 
 @media (min-width: $tablet-width)
   .box-range
     position: relative
-    height: 462px
+    height: 632px
 
-  .box-range__image-before
+    background-color: #ffffff
+
+  .box-range__wrapper
+    width: 768px
+    height: 465px
+
+  .box-range__before
     position: absolute
-    top: -168px
-    left: 48px
+    bottom: 0
+    left: 0
 
-    width: 680px
-    height: 516px
+    width: 100%
+    height: 463px
 
-  .box-range--after
-    display: block
+    background-image: linear-gradient(to left, #eaeaea 50%, #f2f2f2 50%)
+
+  .box-range__box-before
     position: absolute
     top: 0
     left: 0
 
-    width: 100%
-    height: 462px
+    height: 516px
 
-    background-color: #eaeaea
+  .box-range__image-before
+    position: absolute
+    left: 47px
+    top: 1px
+
+    width: 680px
+    height: 516px
+
+    z-index: 1
+
+  .box-range__box-after
+    height: 516px
+    z-index: 1
 
   .box-range__image-after
-    position: absolute
-    top: -168px
-    left: 21px
+    top: 2px
+    left: 36px
+
+    width: 680px
+    height: 516px
+
+    z-index: 1
 
   .box-range__controls
     position: relative
+    top: 40px
 
-    padding-top: 367px
     padding-right: 13.02%
     padding-left: 12.8%
 
     z-index: 999
 
-  .box-range__text
+  .box-range__btn
     font-size: 20px
     padding-bottom: 6px
 
+    background: transparent
+    border: none
     border-bottom: 1px dotted #b8b8b8
+
+  .box-range__btn:focus,
+  .box-range__btn:focus:active
+    border-bottom: none
+    opacity: 1
 
   .box-range__range
     width: 75.2%
@@ -126,6 +244,7 @@
     margin-top: 1px
 
     border: 12px solid #ffffff
+    border-radius: 50%
     box-shadow: 0 0 0 1px #cdcdcd, 0 2px 4px 1px #cdcdcd
 
   .box-range__range:hover::-webkit-slider-thumb
@@ -144,6 +263,7 @@
     margin-top: 7px
 
     border: 12px solid #ffffff
+    border-radius: 50%
     box-shadow: 0 0 0 1px #cdcdcd, 0 2px 4px 1px #cdcdcd
 
   .box-range__range:hover::-moz-range-thumb
@@ -152,31 +272,77 @@
   .box-range__range:active::-moz-range-thumb
     width: 7x
     height: 7px
+    margin: 0
+    padding: 0
 
     border: 11px solid #ffffff
     box-shadow: 0 0 0 2px $bg-btn-green, 0 4px 4px 1px #adadad
 
+  .box-range__range::-ms-thumb
+    width: 45px
+    height: 6px
+    padding: 0
+
+  .box-range__range::-ms-track
+    width: 75.2%
+    height: 6px
+    padding: 0
+
+    background: transparent
+    border-color: transparent
+    color: transparent
+    border: none
+    box-shadow: none
+    outline: none
+
+  .box-range__range::-ms-fill-lower
+    padding: 0
+    background: #dcdcdc
+    border: none
+    box-shadow: none
+    outline: none
+
+  .box-range__range::-ms-fill-upper
+    padding: 0
+    background: #dcdcdc
+    border: none
+    box-shadow: none
+    outline: none
+
 @media (min-width: $desktop-width)
   .box-range
     width: auto
+    height: 462px
     flex-grow: 1
 
+    background-color: #f2f2f2
+
+  .box-range__wrapper
+    width: 768px
+    height: 465px
+
+  .box-range__box-before
+    top: -174px
+    left: 0
+
+    height: 516px
+
   .box-range__image-before
-    top: -190px
-    left: 135px
+    left: 22px
+    top: -15px
 
-  .box-range--after
-    left: 10%
-
-    width: 90%
+  .box-range__box-after
+    top: -192px
+    right: 0
 
   .box-range__image-after
-    top: -190px
-    left: 17px
+    left: 63px
 
   .box-range__controls
-    padding-right: 12.25%
-    padding-left: 23.8%
+    top: -131px
 
-  .box-range__text
-    margin-bottom: 0
+    padding-right: 13.9%
+    padding-left: 14.1%
+
+  .box-range__btn:hover
+    border-bottom: 1px solid #989898

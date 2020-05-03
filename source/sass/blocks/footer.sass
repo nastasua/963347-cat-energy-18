@@ -2,6 +2,7 @@
 
 .container-footer
   margin: 0
+  margin-top: -6px
   padding: 0
 
   background-color: #f2f2f2
@@ -24,8 +25,7 @@
 .container-footer__logo:hover .container-footer__logo-icon
   opacity: 0.7
 
-.container-footer__logo:focus .container-footer__logo-icon,
-.container-footer__logo:focus:active .container-footer__logo-icon
+.container-footer__logo:active .container-footer__logo-icon
   opacity: 0.3
 
 .container-footer__logo::after
@@ -75,8 +75,7 @@
 .container-footer__link:hover .container-footer__link-icon
   fill: $bg-btn-green
 
-.container-footer__link:focus .container-footer__link-icon,
-.container-footer__link:focus:active .container-footer__link-icon
+.container-footer__link:active .container-footer__link-icon
   fill-opacity: 0.3
 
 @media (min-width: $tablet-width)
@@ -102,7 +101,7 @@
 
 @media (min-width: $desktop-width)
   .container-footer--flex
-    padding-top: 4px
+    padding-top: 12px
 
   .container-footer__logo-icon
     padding-top: 58px

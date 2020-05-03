@@ -4,6 +4,7 @@
   display: flex
   justify-content: center
   align-items: center
+  flex-wrap: wrap
   width: 44.64%
   margin-top: 19px
   margin-right: auto
@@ -36,24 +37,23 @@
 .social__link--facebook:hover .social__link-icon
   fill: $bg-btn-green
 
-.social__link--vkontakte:focus .social__link-icon,
-.social__link--vkontakte:focus:active .social__link-icon,
-.social__link--instagram:focus .social__link-icon,
-.social__link--instagram:focus:active .social__link-icon,
-.social__link--facebook:focus .social__link-icon,
-.social__link--facebook:focus:active .social__link-icon
+.social__link--vkontakte:active .social__link-icon,
+.social__link--instagram:active .social__link-icon,
+.social__link--facebook:active .social__link-icon
   fill-opacity: 0.3
 
 @media (min-width: $tablet-width)
   .social__list
     width: auto
+    max-width: 45%
     margin-top: 22px
+    padding-right: 0
 
   .social__item
     margin-right: 27px
 
-  .social__link--vkontakte
-    margin-left: 21px
+    &:first-child
+      margin-left: 21px
 
   .social__link--instagram
     margin-right: 0
