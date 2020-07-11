@@ -1708,6 +1708,7 @@
     position: relative; }
   .address-box {
     position: absolute;
+    z-index: 1;
     left: 110px;
     top: 95px;
     width: 39.58%;
